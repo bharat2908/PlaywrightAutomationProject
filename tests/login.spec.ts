@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../page/LoginPage';
 
-
+// Positive test cases and negativve test cases
 test.describe('Login Tests', () => {
   test('should login successfully with valid credentials', async ({ page }) => {
     const login = new LoginPage(page);
