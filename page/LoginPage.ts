@@ -2,7 +2,7 @@ import { Page } from '@playwright/test';
 
 // Page Object Model for Login Page
 export class LoginPage {
-  constructor(private page: Page) {}
+  constructor(private page: Page) { }
 
   async goto() {
     await this.page.goto('/');
@@ -16,5 +16,8 @@ export class LoginPage {
 
   async getErrorMessage() {
     return this.page.locator('[data-test="error"]');
+  }
+  async clickOnLoginButton() {
+    await this.page.click('#login-button');
   }
 }
